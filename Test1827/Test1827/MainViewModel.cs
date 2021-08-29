@@ -49,6 +49,14 @@ namespace Test1827
 
         async void StartGetLocation()
         {
+            var sqliteFilename = "Test.db";
+
+            IFolder folder = PCLStorage.FileSystem.Current.LocalStorage;
+
+            string path = PortablePath.Combine(folder.Path.ToString(), sqliteFilename);
+
+
+
             while (true)
             {
                 var result = await Geolocation.GetLocationAsync(
@@ -65,6 +73,8 @@ namespace Test1827
                     {
                         NavigationLogs.Add(item);
                     }
+
+
                 }
 
                 await Task.Delay(60000);

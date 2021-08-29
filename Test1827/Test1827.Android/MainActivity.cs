@@ -14,8 +14,15 @@ namespace Test1827.Droid
         protected override void OnCreate(Bundle savedInstanceState)
         {
             string dbPath = FileAccessHelper.GetLocalFilePath("Test.db");
-            base.OnCreate(savedInstanceState);
+            //string backupfile = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "backend.db3");
+            string backupfile = Path.Combine((string)Application.Context.GetExternalFilesDir(Android.OS.Environment.DirectoryDocuments), "backup.db");
 
+            //string backupfile = Path.Combine(Android.App.Application.Context.GetExternalFilesDir("").AbsolutePath, "backup.db");
+
+            File.Copy(dbPath, backupfile, true); 
+
+            base.OnCreate(savedInstanceState);
+             
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
