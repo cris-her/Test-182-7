@@ -19,8 +19,8 @@ namespace Test1827.Droid
 
             //string backupfile = Path.Combine(Android.App.Application.Context.GetExternalFilesDir("").AbsolutePath, "backup.db");
 
-            File.Copy(dbPath, backupfile, true); 
-
+            File.Copy(dbPath, backupfile, true);
+            //Application.Context.DeleteDatabase(dbPath);
             base.OnCreate(savedInstanceState);
              
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);

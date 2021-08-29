@@ -29,7 +29,8 @@ namespace Test1827
             //System.IO.Directory.CreateDirectory(path);
 
             //database = new DBOperations(Path.Combine(path));
-            Db = new SQLiteConnection(Path.Combine(path));
+            Db = new SQLiteConnection(Path.Combine(path), false);
+            
             Db.CreateTable<NavigationLog>();
             NavigationLogs = new ObservableCollection<NavigationLog>();
             StartGetLocation();
