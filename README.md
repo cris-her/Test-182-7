@@ -9,7 +9,7 @@
 MÁS INFORMACIÓN:  
 https://docs.microsoft.com/es-mx/xamarin/essentials/geolocation?tabs=android  
 https://docs.microsoft.com/en-us/xamarin/android/data-cloud/data-access/using-sqlite-orm  
-https://github.com/oysteinkrog/SQLite.Net-PCL (is deprecated)  
+https://github.com/oysteinkrog/SQLite.Net-PCL (deprecated)  
 
 
 
